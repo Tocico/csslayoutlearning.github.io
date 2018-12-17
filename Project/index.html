@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="CSS Layout Learning täcker det mest grundläggande teknikerna, häftigaste CSS modellerna och enkla exemplen på hur du kan bygga din hemsida! Vi erbjuder dig en enkel väg till dina mål!">
+    <title>Hem</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Molle:400i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Vidaloka" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Karma" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
+
+</head>
+
+<body>
+    
+    <div class="container">
+        <nav class="navigation">
+            <label for="toggle" class="navi-label">
+                <span class="icon-toggle"><i class="fas fa-bars"></i></span>
+            </label>
+            <input type="checkbox" id="toggle" class="nav-checkbox" value=0>
+            <div class="nav-menue">
+    
+                <ul>
+    
+                    <li class="active "><a href="index.html">Hem</a></li>
+                    <li><a href="boxmodellen.html">Boxmodellen</a></li>
+                    <li><a href="positionering.html">Positionering</a></li>
+                    <li><a href="float.html">Float</a></li>
+                    <li><a href="tabell.html">Tabell</a></li>
+                    <li><a href="grid.html">Grid</a></li>
+                    <li><a href="flexbox.html">Flexbox</a></li>
+                </ul>
+            </div>
+            <div class="toggle-overlay"></div>
+        </nav>
+
+        <header class="header">
+            <h1>CSS Layout Learning</h1>
+            <img src="./img/yellowback.jpg" alt="Bakgrundsbild på kontorsredskap">
+        </header>
+        <div class="text">
+            <p>Välkommen till CSS Layout Learning! Nu när du har hittat hit betyder att du nu är redo att lära dig hur
+                man placerar, strukturerar och skapar en CSS Layout till din webbsida. Du är trött på basic och vill
+                äntligen skapa en sida som följer dina ideer. Låter det här som du? Look No Further! Vi täcker det mest
+                grundläggande teknikerna, häftigaste CSS modellerna och enkla exemplen på hur du kan bygga din hemsida!
+                Vi erbjuder dig en enkel väg till dina mål, vart vill du starta?
+            </p>
+        </div>
+
+
+            <!-- <div class="flex-box">    Det fungerar inte med grid om man har en div -->
+
+            <div class="float-left grid1 main">
+                <a href="boxmodellen.html">
+                    <h2 class="text-pic">Boxmodellen</h2>
+                    <img class="mini-pic" src="./img/boxmodell.jpg" alt="Boxmodellen">
+                </a>
+            </div>
+            <div class="float-right grid2 main">
+                <a href="float.html">
+                    <h2 class="text-pic">Float</h2>
+                    <img class="mini-pic" src="./img/float.jpg" alt="Float">
+                </a>
+            </div>
+            
+            
+            <div class="float-left grid3 main">
+                <a href="positionering.html">
+                    <h2 class="text-pic">Positionering</h2>
+                    <img class="mini-pic" src="./img/positionering.jpg" alt="Positionering">
+                </a>
+            </div>
+            <div class="float-right grid4 main" >
+                <a href="tabell.html">
+                    <h2 class="text-pic">Tabell</h2>
+                    <img class="mini-pic" src="./img/tabell.jpg" alt="Tabell">
+                </a>
+            </div>
+
+            <div class="float-left grid5 main" >
+                <a href="grid.html">
+                    <h2 class="text-pic">Grid</h2>
+                    <img class="mini-pic" src="./img/grid.jpg" alt="Grid">
+                </a>
+            </div>
+            <div class="float-right grid6 main" >
+                <a href="flexbox.html">
+                    <img class="mini-pic" src="./img/flexbox.jpg" alt="Flexbox">
+                    <h2 class="text-pic">Flexbox</h2>
+                </a>
+            </div>
+        <!-- </div> -->
+
+        <div class="clear-fix"></div>
+
+        <footer class="footer">
+
+
+            <div class="footer-logo"><img src="./img/logo.png" alt="css layout learning logo">
+                <div class="copyright">&copy; 2018 CLL.com</div>
+
+            </div>
+
+        </footer>
+
+    </div>
+
+
+
+</body>
+
+</html>

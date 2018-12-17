@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <meta name="description" content="CSS Layout Learning täcker det mest grundläggande teknikerna, häftigaste CSS modellerna och enkla exemplen på hur du kan bygga din hemsida! Vi erbjuder dig en enkel väg till dina mål!">
+
+ <title>Float</title>
+ <link rel="stylesheet" href="float-page.css" />
+ <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+   crossorigin="anonymous">
+ <link href="https://fonts.googleapis.com/css?family=Molle:400i" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css?family=Vidaloka" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css?family=Karma" rel="stylesheet">
+
+</head>
+<body>
+    
+    <div class="container">
+            <nav class="navigation">
+                <label for="toggle" class="navi-label">
+                    
+                    <span class="icon-toggle"><i class="fas fa-bars"></i></span>
+                </label>
+                <input type="checkbox" id="toggle" class="nav-checkbox" value=0>
+                <div class="nav-menue">
+                    
+                    <ul> 
+                        
+                        <li><a href="index.html">Hem</a></li>
+                        <li><a href="boxmodellen.html">Boxmodellen</a></li>
+                        <li><a href="positionering.html">Positionering</a></li>
+                        <li class="active"><a href="float.html">Float</a></li>
+                        <li><a href="tabell.html">Tabell</a></li>
+                        <li><a href="grid.html">Grid</a></li>
+                        <li><a href="flexbox.html">Flexbox</a></li>
+                    </ul>
+                </div>          
+                <div class="toggle-overlay"></div>
+        </nav>          
+        <section class="info">
+            <h1>Floatmodellen</h1>
+            <h2>Float Historik</h2>
+            <p>
+                
+                <br> Skapades med syftet att utvecklare skulle kunna justera position av bildelement och text för att skapa en layout. Float gjorde det möjligt för text att visas runt om en bild. Float har sedan dess används för att skapa hela layouter på många sidor, med kolumner och information. Float fick som störst användningsområde inom nyheter och artiklar. 
+            </p>
+            <h2>Användningsområde</h2>
+            <p>
+                
+                Float används för att kunna justera position av block, information och bilder. Styra flödet på sidan. 
+            </p>
+            <ul>
+                <li>float:right;</li>
+                <li>float:left;</li>
+                <li>float:both;</li>
+                <li>float:none;</li>
+                <li>float:inherit</li>
+            </ul>        
+            
+            
+            
+            
+            <p>       När float left sätt på ett element så kommer all information att sätta sig höger om blocket, används för att göra elementet flytande till vänster i sin behållare.  
+                Float right används för samma syfte fast till höger.
+                
+                Float both gör så att inga floats är tillåtna på sidan, varken höger eller vänster.
+                
+                Float none gör så att elementen inte flyter åt något håll, det är standard positionering.
+                
+                Float inherit gör att elementet följer sin “parents” float.
+                
+                Att använda sig av floats kan göra det väldigt problematiskt på sidan då alla element kommer positionera sig efter det angivna flowet. 
+                Det är därför det är nödvändigt att göra en så kallad “clear-fix”. Det är en klass som skapas med syfte av att bryta upp floaten och justera flödet av sidan.
+                
+                Se exempel 4.
+                
+                
+                
+            </p>
+        </section>
+    
+    <div class="container-demo"  id="alt">
+        
+        <div class="exempel-container">
+            
+            
+            <a class="a-demo  div-size active-exempel" href="#alt1">Float None</a>
+            <a class="a-demo  div-size active-exempel" href="#alt2">Float Left & Float Right</a>
+            <a class="a-demo div-size active-exempel" href="#alt3">Float Left & Boxmodellen</a>
+            <a class="a-demo div-size active-exempel" href="#alt4">Clearfix (Overflow & Clear)</a>
+            
+        </div>
+        
+        <div class="img-div">
+            <img id="alt1" class="alt1" src="img/Floatnone;.png" alt="En bild på en beskrivning av Float None">
+            <img id="alt2" class="alt2" src="img/FloatleftFloatright.png" alt="En bild på float left och float right">
+            <img id="alt3" class="alt3" src="img/Float.png" alt="En bild på float left och boxmodellen">
+            <img id="alt4" class="alt4" src="img/Clearfix.png" alt="En bild på resultatet av float none">
+        </div>
+        <div class="clear-fix"></div>
+    </div>
+    
+    <section class="info2">
+        <h3>Clear</h3>
+        
+        <p>
+            Clearing kan utföras på många olika sätt, några exempel:
+            Använda sig av en tom div.  
+            Använda sig utav “Overflow” , man sätter overflow egenskapen på “parenten” till elementet. Att ha i åtanke är att Overflow inte är till för att cleara floats.
+        </p>
+        <ul>
+            <li>clear:both; gör så att elementet clearas från float åt båda hållen</li>
+            <li>clear:right; gör så att elementet clearas från float åt höger</li>
+            <li>clear:left; gör så att elementet clearas från float åt vänster</li>
+            <li>clear:none; är defaultvärde och används inte så mycket.</li>
+            <li>clear:inherit; clearar antingen den högra eller vänstra, har inte stöd i IE</li>
+        </ul>
+        
+        
+        
+        
+        <p>
+            
+            <Strong>
+                Overflow: hidden; och Overflow: auto;
+            </Strong> 
+            Overflow auto har stora problem som vi ser i bilden visas en scrollbar i diven, ett litet lustigt bugg. 
+            Ett stort problem som uppstår med box modellen är att när man använder sig av floats och innehållet i  boxarna har olika mycket mängd. Höjden på boxarna kommer att vara väldigt svår att anpassa till varandra. Det kan man kan göra är att sätta en clear-fix på diven som håller boxarna. Det kommer lösa problemet i webbläsaren men det skapar ett nytt problem för mobilanpassning.  Innehållet på diven med mest innehåll kommer börja sticka ut ur boxen och lappa över varandra. För att undvika det här är det bättre att använda sig utav något annat än float för att skapa en layout.
+            
+            problem med float är att när man lägger till margin kommer man behöva räkna om sizen på boxarna. Dvs räkna ut en ny procent för boxsizen.
+        </p>
+        
+    </section>
+    
+
+
+<footer class="footer">
+    
+    <div class="footer-logo"><img src="./img/logo.png" alt="css layout learning logo">
+        <div class="copyright">&copy; 2018 CLL.com</div>
+        
+    </div>
+    
+
+
+</footer>
+</div>         
+</body>
+</html>

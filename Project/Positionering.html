@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="CSS Layout Learning täcker det mest grundläggande teknikerna, häftigaste CSS modellerna och enkla exemplen på hur du kan bygga din hemsida! Vi erbjuder dig en enkel väg till dina mål!">
+    <title>Positionering</title>
+    <link rel="stylesheet" href="posStyle.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Molle:400i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Vidaloka" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Karma" rel="stylesheet">
+  </head>
+  <body>
+      <div class="container">
+          <nav class="navigation">
+             <label for="toggle" class="navi-label">
+                    <span class="icon-toggle"><i class="fas fa-bars"></i></span>
+                  </label>
+                <input type="checkbox" id="toggle" class="nav-checkbox" value=0>
+                <div class="nav-menue">
+  
+                      <ul> 
+  
+                          <li><a href="index.html">Hem</a></li>
+                          <li><a href="boxmodellen.html">Boxmodellen</a></li>
+                          <li class="active"><a href="positionering.html">Positionering</a></li>
+                          <li><a href="float.html">Float</a></li>
+                          <li><a href="tabell.html">Tabell</a></li>
+                          <li><a href="grid.html">Grid</a></li>
+                          <li><a href="flexbox.html">Flexbox</a></li>
+                      </ul>
+                  </div>
+                      <div class="toggle-overlay"></div>
+                  </nav>
+        <section class="info">
+            <h1>Positionering</h1>
+            <p>
+                    CSS position främsta användning är att bestämma ett elements position och de olika nyckelord som finns inom position där varje nyckelord har olika syften och användningar. 
+                    Positions syntax består utav fem stycken nyckelord som används för att bestämma ett elements position i CSS. 
+                    </p>
+                    <ul>
+                        <li>Static</li>
+                        <li>Relative</li>
+                        <li>Absolute</li>
+                        <li>Fixed</li>
+                        <li>Sticky</li>
+                    </ul>
+                </section>
+            
+      <div class="container-demo"  id="alt">
+        <div class="clear-left"></div>
+            
+            <div class="exempel-container">
+                
+                
+                <a class="a-demo div-size active-exempel" href="#alt1">Static</a>
+                <a class="a-demo div-size active-exempel" href="#alt2">Relative</a>
+                <a class="a-demo div-size active-exempel" href="#alt3">Absolute</a>
+                <a class="a-demo div-size active-exempel" href="#alt4">Fixed</a>
+                <a class="a-demo div-size active-exempel" href="#alt5">Sticky</a>
+
+                
+            </div>
+            
+            <div class="img-div">
+                <img id="alt1" class="alt1" src="img/static.png" alt="exempel demo för static">
+                <img id="alt2" class="alt2" src="img/relative.png" alt="exempel demo för relative">
+                <img id="alt3" class="alt3" src="img/absolute.png" alt="exempel demo för absolute">
+                <img id="alt4" class="alt4" src="img/fixed.png" alt="exempel demo för fixed">
+                <img id="alt5" class="alt5" src="img/sticky.png" alt="exempel demo för sticky">
+            </div>
+        </div>
+        <div class="clear-fix"></div>
+        <div class="info">
+            <p><b>Static:</b> Static gör så att elementet följer dokumentets vanliga flow. Men de vanliga egenskaper som top, bottom, right, left och z-index har ingen effekt på elementets position i dokumentet. Elementen vissas i den ordning de uppkommer i dokuments flow.</p>
+            <p><b>Relative:</b> Precis som static så följer ett element med relative med i flow men till skillnad från static så blir relative element påverkade av egenskaperna top, bottom, left, right och z-index men andra element kommer inte påverkas av det relativa elementets position.</p>
+            <p><b>Absolute: </b>Ett absolut elementet försvinner från flow och dess position kommer bestämmas beroende på vart dess närmaste förfäder element ligger så länge det finns ett. Annars kommer den placeras relativt inom sin containing box.</p>
+            <p><b>Fixed:</b>Ett absolut elementet försvinner från flow och dess position kommer bestämmas beroende på vart dess närmaste förfäder element ligger så länge det finns ett. Annars kommer den placeras relativt inom sin containing box.</p>
+            <p><b>Sticky: </b>Sticky följer dokumentets flow precis som static och relative och kommer att behålla samma position i browsern när du går ner i hemsidan. Så om man går ner i hemsidan så kommer elementet att följa med ner.
+            </p>
+        </div>
+        
+        
+        
+        
+        <div class="footer">
+            
+            <div class="footer-logo"><img src="./img/logo.png" alt="css layout learning logo">
+                <div class="copyright">&copy; 2018 CLL.com</div>
+                
+            </div>
+            
+        </div>
+        </div>
+        
+  </body>
+</html>

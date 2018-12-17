@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <meta name="description" content="CSS Layout Learning täcker det mest grundläggande teknikerna, häftigaste CSS modellerna och enkla exemplen på hur du kan bygga din hemsida! Vi erbjuder dig en enkel väg till dina mål!">
+ <title>Grid</title>
+ <link rel="stylesheet" href="grid-page.css" />
+ <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+   crossorigin="anonymous">
+ <link href="https://fonts.googleapis.com/css?family=Molle:400i" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css?family=Vidaloka" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css?family=Karma" rel="stylesheet">
+
+</head>
+<body>
+    
+    <div class="container">
+            <div class="navigation">
+                <label for="toggle" class="navi-label">
+                    
+                    <span class="icon-toggle"><i class="fas fa-bars"></i></span>
+                </label>
+                <input type="checkbox" id="toggle" class="nav-checkbox" value=0>
+                <div class="nav-menue">
+                    
+                    <ul> 
+                        
+                        <li><a href="index.html">Hem</a></li>
+                        <li><a href="boxmodellen.html">Boxmodellen</a></li>
+                        <li><a href="positionering.html">Positionering</a></li>
+                        <li class="active"><a href="float.html">Float</a></li>
+                        <li><a href="tabell.html">Tabell</a></li>
+                        <li><a href="grid.html">Grid</a></li>
+                        <li><a href="flexbox.html">Flexbox</a></li>
+                    </ul>
+                </div>          
+                <div class="toggle-overlay"></div>
+        </div>          
+        <div class="info">
+            <h1>Grid</h1>
+            <h2>Användningsområde</h2>
+           
+            <p>
+                    När man hör grid skall man direkt tänka på en layout med en column uppbyggnad.
+                    Grid är väldigt bra att använda pga dess flexibilitet, det går väldigt lätt att positionera element på sidan. 
+                        
+            </p>
+            <br><br>
+
+            <p>
+                    Grid används väldigt mycket pga den erbjuder ett väldigt simpelt sätt att skapa en responsiv webbsida. När man jobbar med grid till layouter som skall vara responsiva heter det “Grid View”. Det har oftast 12 kolumner och en bredd som är 100%, den kommer att anpassa sig efter användarens enhet. 
+                    <br><br>
+                    För att bygga en responsiv webbsida med grid kommer vi behöva se till så alla element på sidan har box-sizing: border-box;
+                    
+                    För mer information om box-sizing, @box-sizing.
+                    
+                    När vi jobbar med 12 kolumner kommer vi vilja använda oss procent för hur stor bredd varje kolumn skall ha, då är det bra att vet hur mycket en kolumn har i bredd.
+                    
+                    Med lite simpel matematik kan vi dividera 100 med tolv: 100/12 = 8.3, dvs 8.3% bredd för varje kolumn.  
+                  <br>  Syntax:
+                    
+            </p>
+            
+            
+            <img style="margin: 0%;" src="img/col.png" alt="En bild på procent sats för grid">
+            
+            <p>Grid kolumn är det vertikala spåret i en CSS Grid Layout och är mellanrummet mellan grid linjer. De här kolumnerna kommer att bli automatisera i storlek om inget annat anges. Man skriver Grid kolumner genom att skriva grid-template-column. 
+                </p>
+            
+        </div>
+    
+    <div class="container-demo"  id="alt">
+        <div class="clear-left"></div>
+        <div class="box">
+            
+            <div class="exempel-container">
+                
+                
+                <a class="a-demo div-size active-exempel" href="#alt1">grid-template-columns: 1fr 2fr 1fr</a>
+                <a class="a-demo  div-size active-exempel" href="#alt2">grid-template-columns: 10% 20% 30%</a>
+                <a class="a-demo  div-size active-exempel" href="#alt3">grid-template-columns: auto auto auto;</a>
+                
+                
+            </div>
+            <div class="img-div">
+                <img id="alt1" class="alt1" src="img/grid-template-columns-1fr.png" alt="En bild på en beskrivning av Grids kolumn size egenskap Fr">
+                <img id="alt2" class="alt2" src="img/grid-template-columns-10.png" alt="En bild på en beskrivning av Grids kolumn size med hjälp av procent">
+                <img id="alt3" class="alt3" src="img/grid-template-columns-auto.png" alt="En bild på en beskrivning av Grid kolumn size egenskap auto">
+            </div>
+        </div>
+    </div>
+    
+    <div class="info2">
+        
+        <p>
+            Grid row är det horisontala spåret i CSS Grid Layout och är mellanrummet mellan två horisontella grid linjer. De här raderna kommer att automatisera i storlek om inget annat anges.  
+            
+        </p>
+        
+        
+        
+        
+    </div>
+    <div class="container-demo"  id="alt">
+        <div class="box">
+            
+            <div class="exempel-container">
+                
+                
+                <a class="a-demo div-size active-exempel" href="#alt4">grid-template-rows: 1fr 2fr 1fr</a>
+                <a class="a-demo  div-size active-exempel" href="#alt5">grid-template-rows: 10% 20% 30%</a>
+                <a class="a-demo  div-size active-exempel" href="#alt6">grid-template-rows: auto auto auto;</a>
+                
+                
+            </div>
+            <div class="img-div">
+                <img id="alt4" class="alt4" src="img/grid-template-rows-1fr.png" alt="En bild på en beskrivning av Grids row size egenskap Fr">
+                <img id="alt5" class="alt5" src="img/grid-template-rows-auto.png" alt="En bild på en beskrivning av Grids row size med hjälp av procent">
+                <img id="alt6" class="alt6" src="img/grid-template-rows-50px.png" alt="En bild på en beskrivning av Grid row size egenskap auto">
+            </div>
+            <div class="clear-fix"></div>
+        </div>
+    </div>
+    
+
+
+<div class="footer">
+    
+    <div class="footer-logo"><img src="./img/logo.png" alt="css layout learning logo">
+        <div class="copyright">&copy; 2018 CLL.com</div>
+        
+    </div>
+    
+
+
+</div>
+</div>
+</div>          
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="CSS Layout Learning täcker det mest grundläggande teknikerna, häftigaste CSS modellerna och enkla exemplen på hur du kan bygga din hemsida! Vi erbjuder dig en enkel väg till dina mål!">
+    <title>Tabell</title>
+    <link rel="stylesheet" href="tabell.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Molle:400i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Vidaloka" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Karma" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navigation">
+            <label for="toggle" class="navi-label">
+                <span class="icon-toggle"><i class="fas fa-bars"></i></span>
+            </label>
+            <input type="checkbox" id="toggle" class="nav-checkbox" value=0>
+            <div class="nav-menue">
+
+                <ul>
+
+                    <li><a href="index.html">Hem</a></li>
+                    <li><a href="boxmodellen.html">Boxmodellen</a></li>
+                    <li><a href="positionering.html">Positionering</a></li>
+                    <li><a href="float.html">Float</a></li>
+                    <li class="active"><a href="tabell.html">Tabell</a></li>
+                    <li><a href="grid.html">Grid</a></li>
+                    <li><a href="flexbox.html">Flexbox</a></li>
+                </ul>
+            </div>
+            <div class="toggle-overlay"></div>
+        </nav>
+
+
+            <section class="info">
+                <h1>Tabell</h1>
+                
+                <h2>Tabel-layout</h2>
+                <p>
+                    Table-layout anger vilken algoritm som ska användas för att skapa layouten för en tabell.
+                </p>
+                <ul>
+                    <li><strong>table-layout:auto</strong> Webbläsare använder en automatisk tabell-layout-algoritm.
+                        Kolumnbredden bestäms av det bredaste innehållet i cellerna. Det kommer inte förstöra innehållet.</li>
+                        <li><strong>table-layout:fixed</strong> Det är fast layout. Kolumnbredden bestäms av bredden på tabellen
+                            och kolumn elementet eller bredden på den första raden av cellerna.</li>
+                        </ul>
+                        
+                        <div class="clear-left"></div>
+                        
+                        <div class="container-demo" id="section-1">
+                            
+                            <div class="exempel-container">
+                                
+                                <a class="a-demo  div-size active-exempel" href="#alt1">table-layout:auto</a>
+                                <a class="a-demo div-size active-exempel" href="#alt2">table-layout:fixed</a>
+                                
+                            </div>
+                            
+                            
+                            <div class="img-div">
+                                <img id="alt1" class="alt1" src="./img/tablelayout-auto.png" alt="exempel demo för table-layout:auto;">
+                                <img id="alt2" class="alt2" src="img/tablelayout-fixed.png" alt="exempel demo för table-layout:fixed;">
+                            </div>
+                            <div class="clear-fix"></div>
+                        </div> 
+                    </section>
+                    
+                    <section class="info">
+                        <h2>Border-collapse</h2>
+                        <p>Anger hur kanterna i tabell element ska falla samman.</p>
+                        <ul>
+                            <li><strong>border-collapse:collapse</strong> Det finns bara en border och ingen plats mellan
+                                cellerna.
+                            </li>
+                            <li><strong>border-collapse:separate</strong> Det finns plats mellan cellerna.</li>
+                        </ul>
+                        
+                        
+                        
+                        
+                        <div class="clear-fix"></div>
+                        
+                        <div class="container-demo" id="section-2">
+                            
+                            <div class="exempel-container">
+                                
+                                
+                                <a class="a-demo  div-size active-exempel" href="#alt3">border-collapse:collapse</a>
+                                <a class="a-demo div-size active-exempel" href="#alt4">border-collapse:separate</a>
+                                
+                            </div>
+                            
+                            <div class="img-div">
+                                <img id="alt3" class="alt3" src="img/collapse.png" alt="exempel demo för border-collapse:collapse">
+                                <img id="alt4" class="alt4" src="img/separate.png" alt="exempel demo för border-collapse:separate">
+                            </div>
+                            <div class="clear-fix"></div>
+                            
+                            
+                        </div>
+                    </section>
+                    
+                    <section class="info">
+                        <h2>Border-spacing</h2>
+                        <p><strong>border-spacing</strong>:Anger längden av space mellan cellerna.</p>
+                        
+                        
+                        
+                        <div class="clear-fix"></div>
+                        
+                        <div class="container-demo" id="section-3">
+                            
+                            <div class="exempel-container">
+                                
+                                
+                                <a class="a-demo  div-size active-exempel" href="#alt5">border-spacing:10 px</a>
+                                <a class="a-demo div-size active-exempel" href="#alt6">border-spacing:20px 30px</a>
+                                
+                            </div>
+                            
+                            <div class="img-div">
+                                <img id="alt5" class="alt5" src="img/border-spacing10px.png" alt="exempel demo för border-spacing: 10px;">
+                                <img id="alt6" class="alt6" src="img/border-spacing20px30px.png" alt="exempel demo för border-spacing: 20px 30px;">
+                            </div>
+                            <div class="clear-fix"></div>
+                            
+                            
+                        </div>
+                    </section>
+                    
+                    <section class="info">
+                        <h2>Caption-side</h2>
+                        <p>Anger vart en caption element skall placeras.</p>
+                        
+                        
+                        <div class="container-demo" id="section-4">
+                            
+                            <div class="exempel-container">
+                                
+                                
+                                <a class="a-demo  div-size active-exempel" href="#alt7">caption-side:top</a>
+                                <a class="a-demo div-size active-exempel" href="#alt8">caption-side:bottom</a>
+                                
+                            </div>
+                            
+                            <div class="img-div">
+                                <img id="alt7" class="alt7" src="img/caption-top.png" alt="exempel demo för caption-side:top">
+                                <img id="alt8" class="alt8" src="img/caprion-bottom.png" alt="exempel demo för caption-side:bottom">
+                            </div>
+                            <div class="clear-fix"></div>
+                            
+                            
+                        </div>
+                    </section>
+                    <footer class="footer">
+                        
+                        <div class="footer-logo"><img src="./img/logo.png" alt="css layout learning logo">
+                            <div class="copyright">&copy; 2018 CLL.com</div>
+                            
+                        </div>
+                        
+                    </footer>
+                </div>
+                
+            </body>
+            
+            </html>

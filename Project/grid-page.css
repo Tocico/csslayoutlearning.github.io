@@ -1,0 +1,386 @@
+body{
+  width: 100%;
+  margin:0;
+  padding: 0;
+  background-color: rgb(244, 247, 243);
+}
+
+/*Humburgare*/
+.navigation{
+  width: 100%;
+  background-color: rgb(135, 174, 180);
+  text-align: right;
+  height: 70px;
+  position: fixed;
+}
+
+
+.fa-bars{
+  padding-top: 15px;
+  padding-right: 25px;
+  font-size: 35px;
+  color: white;
+  position: relative;
+  z-index: 11;
+}
+
+
+
+.nav-menue ul{
+  padding: 0;
+  display: none;
+}
+
+.nav-menue li{
+  list-style: none;
+  padding: 0;
+
+}
+.nav-menue ul a{
+  width: 100%;
+  text-decoration: none;
+  color: rgb(231, 231, 231);
+  font-size: 20px;
+  font-family: 'Karma', serif;
+  line-height: 40px;
+  position: relative;
+  z-index: 11;
+  text-align: center;
+  right: 10%;
+
+}
+
+
+
+.nav-checkbox{
+  display: none; 
+}
+
+
+.nav-checkbox:checked + .nav-menue ul{
+  display: block;
+}
+
+.nav-checkbox:checked + .nav-menue + .toggle-overlay{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgb(135, 174, 180);
+  z-index: 10;
+  height: 460px;
+}
+
+/**/
+
+.container{
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.info h1, h3{
+    padding-top: 60px;
+
+}
+.container-demo{
+  margin: 0 auto;
+  width: 85%;
+  background-color: rgb(244, 247, 243);
+  padding-top:10px;
+  min-height: calc(80vh - 260px);
+}
+.container-demo ul, p{
+  text-align: left;
+}
+
+.exempel-container{
+  width: 100%;
+  margin: 0;
+}
+              
+.div-size{
+  display: block;
+  background-color: rgb(250, 250, 250);
+  box-shadow: 1px 2px 2px black;
+  padding: 2% 0% 2% 0%;
+  border: 1px solid #000;
+  margin: auto;
+  margin-bottom: 5%; 
+}
+.info{
+  padding: 2% 0;
+  width: 85%;
+  margin: auto;
+}
+.info2{
+  padding: 2% 0;
+  width: 85%;
+  margin: auto;
+}
+
+img{
+  max-height: 400px;
+  margin: auto;
+  max-width: 100%;
+}
+.a-demo{
+  text-decoration: none;
+  color: black;
+  border-radius: 5%;
+  font-size: 1.0em;
+  text-align: left;
+  padding-left: 10px;
+
+  
+}
+
+div#alt img{display:none;}
+
+div#alt img.alt1:target {display:block;}
+div#alt img.alt2:target {display:block;}
+div#alt img.alt3:target {display:block;}
+div#alt img.alt4:target {display:block;}
+div#alt img.alt5:target {display:block;}
+div#alt img.alt6:target {display:block;}
+
+
+
+.footer-logo{
+  text-align: center;
+  background-color: rgb(135, 174, 180);
+  font-size: 10px;
+}
+
+.footer-logo img{
+  width: 15%;
+}
+.footer{
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  margin-top: 50px;
+}
+
+.clear-fix{
+  clear: both;
+}
+.clear-left{
+  clear: left;
+}
+.footer-logo > img{
+  padding-top: 15px;
+}
+
+.active-exempel:active:hover{
+  background-color: #FDB2A4;
+}
+
+.exempel-container{
+  display: block;
+}
+      @supports(display: grid){
+        *{
+          box-sizing: border-box;
+      
+      }
+      
+    
+       .navigation{ display: grid;
+           grid-template-columns: 1fr;
+           grid-column: 1/2 ; grid-row: 1}
+       .info{display: grid;
+           grid-template-columns: 1fr;
+           grid-column: 1/2; grid-row: 2}
+       .exempel-container{display: grid;
+           grid-template-columns: 1fr;
+           grid-column: 1/2; grid-row: 3}
+       .footer{display: grid;
+           grid-template-columns: 1fr;
+           grid-column: 1/2; grid-row: 5}
+       .img-div{display: grid;
+           grid-template-columns: 1.2fr;
+           grid-column: 1/2; grid-row: 3}
+       .info2{display: grid;
+           grid-template-columns: 1fr;
+           grid-column: 1/2; grid-row: 4}
+     
+      
+    
+      }
+      
+
+
+ /*media 576px*/
+
+ @media(min-width: 576px){
+
+  body{
+    font-size: 20px;
+  }
+  .nav-menue ul a{
+          line-height: 45px;
+  }
+
+  
+  }      
+      
+
+@media (min-width: 767px) {
+
+  .nav-menue ul a{
+    line-height: 50px;
+}
+
+.nav-menue ul a{
+font-size: 25px;
+}
+
+.a-demo:hover{
+  background-color: #FDB2A4;
+
+}
+
+.a-demo{
+  font-size: 1.2em;
+}
+  
+  
+  .container-demo{
+    margin: 0 auto;
+  }
+  .img-div{
+    width: 100%;
+  
+  }
+  .exempel-container{
+    width: 100%;
+    height: auto;
+    
+  }
+  .div-size{
+    display: block;
+    
+  }
+  .footer-logo{
+    font-size: 13px;
+}
+  
+}
+
+  @supports(display: grid){ 
+  *{
+    box-sizing: border-box;
+
+}
+
+.navigation{
+        grid-column: 1/2; grid-row: 1}
+ .info{
+     grid-column: 1/2; grid-row: 2}
+ .exempel-container{
+     grid-column: 1/2; grid-row: 3}
+.img-div{
+    grid-column: 1/2; grid-row: 4}
+.info2{
+    grid-column: 1/2; grid-row: 5}
+ .footer{
+     grid-column: 1/2; grid-row: 6}
+
+.div-size {
+display: block;
+width: 100%;
+margin-top: 0%;
+margin-left: 0%;
+} 
+} 
+@media(min-width: 992px){
+  
+  body{
+    font-size: 23px;
+  }
+  
+  
+  .nav-menue ul,
+  .nav-menue li,
+  .nav-menue a{
+    display: block;
+  }
+  
+  .navigation{
+    text-align: center;
+  }
+  
+  
+  .icon-toggle{
+    display: none;
+  }
+  
+   .nav-menue ul{
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     padding: 20px 0;
+       background: rgb(135, 174, 180);
+       margin: auto;
+       z-index: 2; 
+       
+      }
+      
+      
+      .nav-menue li {
+        display: inline-block;
+        width: 13%;
+        text-align: center;
+        
+      }
+      
+      .nav-menue li+li {
+        border-left: 1px solid rgb(255, 255, 255);
+      }
+      
+      .nav-menue ul a,
+      .footer-navigation a {
+        text-decoration: none;
+        color: rgb(231, 231, 231);
+        font-size: 20px;
+        font-family: 'Karma', serif;
+        position: static;
+      }
+      
+      .nav-menue li.active a{
+        color: #153E5C;
+        
+      }
+      
+      .nav-menue a:hover{
+        color: #FDB2A4;
+        border-bottom: 2px solid #FDB2A4;
+      }
+
+      .container-demo{
+        width: 90%;
+      }
+      
+      .img-div{
+        float: right;
+        width: 60%;
+      } 
+      .exempel-container{
+        float: left;
+        width: 40%;
+        
+      }
+
+      .img-div img{
+        max-width: 90%;
+      }
+
+      .footer-logo {
+        font-size: 15px;
+    }
+
+      
+    }

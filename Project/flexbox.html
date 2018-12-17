@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="CSS Layout Learning täcker det mest grundläggande teknikerna, häftigaste CSS modellerna och enkla exemplen på hur du kan bygga din hemsida! Vi erbjuder dig en enkel väg till dina mål!">
+
+    <title>Flex</title>
+    <link rel="stylesheet" href="flexboxStyle.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Molle:400i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Vidaloka" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Karma" rel="stylesheet">
+  </head>
+  <body>
+      <div class="container">
+          <nav class="navigation">
+             <label for="toggle" class="navi-label">
+                    <span class="icon-toggle"><i class="fas fa-bars"></i></span>
+                  </label>
+                <input type="checkbox" id="toggle" class="nav-checkbox" value=0>
+                <div class="nav-menue">
+  
+                      <ul> 
+  
+                          <li><a href="index.html">Hem</a></li>
+                          <li><a href="boxmodellen.html">Boxmodellen</a></li>
+                          <li><a href="positionering.html">Positionering</a></li>
+                          <li><a href="float.html">Float</a></li>
+                          <li><a href="tabell.html">Tabell</a></li>
+                          <li><a href="grid.html">Grid</a></li>
+                          <li class="active"><a href="flexbox.html">Flexbox</a></li>
+                      </ul>
+                  </div>
+                      <div class="toggle-overlay"></div>
+                  </nav>
+                  <section class="info">
+                      <h1>Flexbox</h1>
+                <p>Flexbox är en CSS modell som används för att fördela plats och bestämma ett elements placering på en webbplats över en positions axel. Denna axel är definierad som flex-direction och har i sin tur 4 olika egenskaper:</p>
+                <ul>
+                    <li>Row</li>
+                    <li>Row-reverse</li>
+                    <li>Column</li>
+                    <li>Column-reverse</li>
+                </ul>
+                  </section>
+            <div class="container-demo"  id="alt">
+                <div class="clear-left"></div>
+            
+            <div class="exempel-container">
+                
+                
+                <a class="a-demo div-size active-exempel" href="#alt1">Row</a>
+                <a class="a-demo div-size active-exempel" href="#alt2">Row-reverse</a>
+                <a class="a-demo div-size active-exempel" href="#alt3">Column</a>
+                <a class="a-demo div-size active-exempel" href="#alt4">Column-reverse</a>
+
+                
+            </div>
+            
+            <div class="img-div">
+                <img id="alt1" class="alt1" src="img/flexrow.png" alt="exempel demo för flexrow">
+                <img id="alt2" class="alt2" src="img/flexrow-reverse.png" alt="exempel demo för flexrow revertse">
+                <img id="alt3" class="alt3" src="img/flexcolumn.png" alt="exempel demo för flexcolumn">
+                <img id="alt4" class="alt4" src="img/flexcolumn-reverse.png" alt="exempel demo för flexcolumn reverse">
+            </div>
+        </div>
+        <div class="clear-fix"></div>
+        <section class="info">
+            <p>Row och row-reverse beskriver ett elements position på den vertikala axeln medans column och column-reverse beskriver elementets position på den horisontella axeln.</p>
+            <h2>Flex-container</h2>
+            <p>Det område som använder sig utav flexbox kallas för en flex-container och definieras i CSS med hjälp utav flex eller display-flex. När containern är definierad kommer alla element inom den att bli flex-element och kommer bete sig på följande sätt inom containern:</p>
+            <ul>
+                <li>Alla element kommer visas på led</li>
+                <li>Det första elementet kommer visas på axelns kant</li>
+                <li>Elementets dimensioner kan inte förändras men kan förminskas</li>
+                <li>Elementet kommer att dras ut för att fylla ut axeln</li>
+                <li>Flex-basis är satt till auto</li>
+                <li>Flex-wrap är satt till nowrap</li>
+            </ul>
+            <p>Vanligtvis så är en flex-container endast på en enda rad men det går att sträcka containern till två rader. Detta gör man via flex-wrap som vanligtvis är satt till nowrap. Sätter man det istället till wrap så kommer alla element som inte får plats på den första raden att gå ner till raden under.</p>
+            <h2>Egenskaper hos flex element</h2>
+            <p>För att lättare kontrollera flex element så kan man använda sig utav tre olika egenskaper.</p>
+            <ul>
+                <li>Flex-basis</li>
+                <li>Flex-grow</li>
+                <li>Flex-shrink</li>
+            </ul>
+        </section>
+        <div class="container-demo"  id="alt-2">
+                <div class="clear-left"></div>
+            
+            <div class="exempel-container">
+                
+                
+                <a class="a-demo div-size active-exempel" href="#alt5">Flex-grow</a>
+                <a class="a-demo div-size active-exempel" href="#alt6">Flex-shrink</a>
+                <a class="a-demo div-size active-exempel" href="#alt7">Flex-basis</a>
+
+                
+            </div>
+            
+            <div class="img-div">
+                <img id="alt5" class="alt5" src="img/flex-grow.png" alt="exempel demo för flex grow">
+                <img id="alt6" class="alt6" src="img/flex-shrink.png" alt="exempel demo för flex shrink">
+                <img id="alt7" class="alt7" src="img/flexbasis.png" alt="exempel demo flex basis">
+            </div>
+        <section class="info">
+            <p>Flex-basis bestämmer hur mycket ledigt utrymme som finns i containern, flex-grow gör så att ett element kan växa om den ligger på flex axel och flex-shrink gör så att elementet kan krympa på flex axeln.</p>
+            <h2>Förkortningar av flex egenskaper</h2>
+            <p>Man använder dock sällan dessa egenskaper för sig själva. Istället förkortar vi alla egenskaper till flex där de tre olika värdena skrivs i ordningen flex-grow, -shrink, och -basis. Det finns också några förbestämda värden som vi kan använda oss av. </p>
+            <ul>
+                <li>Flex: initial </li>
+                <li>Flex: auto</li>
+                <li>Flex: none</li>
+                <li>Flex: (positivt nummer)</li>
+            </ul>
+            <p>Flex: initial innebär att elementet kommer ha samma egenskaper som vanligt. Flex:auto ser till så att elementet kan krympa och växa efter den position den har på flex axeln. Flex:none kommer göra att elementet inte kan förändras oavsett position på axeln och flex: (positivt nummer) gör så att elementet växer som vanligt.</p>
+            <h2>Fördelning av oanvänt utrymme</h2>
+            <p>En av de viktigaste förmågorna med flexbox är hur vi delar upp utrymmet mellan flex element. Detta gör vi med hjälp utav align-items. Align-items är från början satt till stretch vilket gör att alla element vi har i en flex-container kommer att matcha höjden med det största elementet i den containern. Vi kan också sätta align-items till flex-start vilket kommer rada upp alla element från containern start, flex-end som radar upp alla element från containerns slut eller center som radar upp dem i mitten.</p>
+        </section>
+        
+    </div>
+    <footer class="footer">
+        
+          <div class="footer-logo"><img src="./img/logo.png" alt="css layout learning logo">
+            <div class="copyright">&copy; 2018 CLL.com</div>
+            
+        </div>
+          
+    </footer>
+    
+</div>
+</body>
+</html>
