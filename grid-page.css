@@ -141,9 +141,11 @@ div#alt img{display:none;}
 div#alt img.alt1:target {display:block;}
 div#alt img.alt2:target {display:block;}
 div#alt img.alt3:target {display:block;}
-div#alt img.alt4:target {display:block;}
-div#alt img.alt5:target {display:block;}
-div#alt img.alt6:target {display:block;}
+
+div#alt-2 img{display:none;}
+div#alt-2 img.alt4:target {display:block;}
+div#alt-2 img.alt5:target {display:block;}
+div#alt-2 img.alt6:target {display:block;}
 
 
 
