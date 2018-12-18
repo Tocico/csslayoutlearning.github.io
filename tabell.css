@@ -361,3 +361,15 @@ div#section-4 img.alt8:target {display:block;}
     
   
     }
+@media(min-width: 1200px){
+    .nav-menue ul a{
+        font-size: 25px;
+    }
+
+
+    .footer-logo {
+        font-size: 18px;
+    }
+
+
+}
