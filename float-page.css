@@ -421,3 +421,17 @@ margin-left: 0%;
       } 
        
     }
+
+@media(min-width: 1200px){
+    .nav-menue ul a{
+        font-size: 25px;
+    }
+
+
+    .footer-logo {
+        font-size: 18px;
+    }
+
+
+}
+
